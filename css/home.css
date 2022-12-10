@@ -1,0 +1,306 @@
+/*TRANSITION*/
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+  }
+  .active.fade-left {
+    animation: fade-left 1s ease-in;
+  }
+  .active.fade-right {
+    animation: fade-right 1s ease-in;
+  }
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+/* HEADER */
+.header{
+    width: 100%;
+    min-height: 60px;
+    background: linear-gradient(180deg, #FFFFFF 72%, rgba(255, 255, 255, 0) 100%);
+    position: fixed; /* riferim per absolute */
+    top: 0;
+    z-index: 100;
+}
+
+.header .navigazione{
+    margin: 0; padding: 0;
+    list-style-type: none;
+}
+
+.header .navigazione li{
+    margin-right: 40px;
+    position: absolute;
+    top: 15px;
+    right: 130px;
+}
+
+.header #about{
+    top: 15px;
+    right: 290px;
+}
+
+.header #logo{
+    float:left;
+    position: absolute;
+    top: 15px;
+    left: 40px; 
+}
+
+.header .navigazione li a{
+    /* Titoletti */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    padding: 3px;
+    /* green/Linear */
+    background: linear-gradient(90deg, #8A2CE4 0.01%, #BEFFF3 113.17%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+/*MOUSE HOVER*/
+.header .navigazione li a:hover{
+    border-bottom: solid 1px #8A2CE4;  
+}
+
+/*FIRST CONTENT*/
+
+@media (min-width: 755px) {
+.first-content {
+        height:100vh;  
+}
+
+.first-content p {
+    font-size:150%;
+}
+}
+
+/*HELLO*/
+.hello {
+font-weight: 700;
+font-size: 9.5rem;
+line-height: 120%;
+display: flex;
+align-items: center;
+/* green/Linear */
+background: linear-gradient(89.99deg, #8A2CE4 0.01%, #BEFFF3 37%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+@media (max-width: 755px) {
+    .hello {
+        font-weight: 700;
+        font-size: 6.5rem;
+        line-height: 120%;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(90deg, #8A2CE4 0.01%, #BEFFF3 78%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
+p {
+    font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 23px;
+line-height: 120%;
+}
+
+/*FIRST LINE*/
+.purple {
+    color:#8A2CE4;
+    text-decoration: none;
+}
+
+.gradiente {
+    background: linear-gradient(90deg, #8A2CE4 0.01%, #BEFFF3 19%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradiente2 {
+    background: linear-gradient(90deg, #8A2CE4 0.01%, #BEFFF3 49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+@media (max-width: 755px) {
+.gradiente2 {
+    background: linear-gradient(90deg, #8A2CE4 0.01%, #BEFFF3 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+}
+
+
+#footer{
+    background: linear-gradient(90deg, #8A2CE4 40%, #BEFFF3 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align:center;
+    font-size:0.8rem;
+}
+
+@media (min-width: 755px) {
+#footer {
+    background: linear-gradient(90deg, #8A2CE4 40%, #BEFFF3 77%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align:center;
+    font-size:0.8rem;
+}
+}
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.bordo {
+    border-top: 10px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, #8A2CE4, #BEFFF3);
+    position:relative;
+}
+
+.bordo2 {
+    border-bottom: 10px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, #8A2CE4, #BEFFF3);
+    position:relative;
+}
+
+a {
+    display: inline-block;
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#8A2CE4;
+}
+
+.zoom {
+    overflow: hidden;
+}
+
+.zoom img{
+    width:100%;
+    transition: 0.2s all ease-in-out; /* Animation */
+}
+
+.zoom:hover img{
+    transform: scale(1.11);
+}
+
+/* 
+    PROVA OPACITY IMAGE HOVER
+.immagine {
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    margin-top: -15%;
+    z-index: 1;
+    pointer-events: none;
+    max-width: 55%;
+    height: auto;
+    z-index:1;
+    opacity:0;
+}
+.immagine:hover{
+    opacity:1;
+} 
+
+.project01 a:hover {
+
+}
+*/
+
+.hypertext a{
+    /* Titoletti */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    padding: 3px;
+    /* green/Linear */
+    background: linear-gradient(90deg, #8A2CE4 0.01%, #BEFFF3 113.17%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+/*MOUSE HOVER*/
+.hypertext a:hover {
+    border-bottom: solid 1px #8A2CE4;  
+}
+
+a.bottone{
+    color:white;
+    border:none;
+    font-family: 'Space Grotesk';
+    font-weight: 100;
+    line-height: 25.08px;
+    letter-spacing: normal;
+    text-transform: none;
+    border-radius: 1rem;
+    font-size: 99%;
+}
+
+.bottone:hover {
+    color:white;
+}
