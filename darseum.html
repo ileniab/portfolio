@@ -108,21 +108,53 @@ Each point is identified with a graphic symbol represented both on the floor and
         
 </div><!--end row-->
 
-
 <!--    end end end end end end -->
 <!--back to top-->
 <div class="row py-2">
-    <div class="col-12 titoletto text-center hypertext"><a class="action-top" href="#top">BACK</a></div>
+  <div class="col-12 titoletto text-center hypertext"><a class="action-top trigger-backtotop" href="#top">BACK</a></div>
 </div>
 
 <!--FOOTER-->
 <div class="row py-2 footer bordo">
-    <div class="col-12 titoletto gradiente2" id="footer">designed & developed with love by ilenia Balella</div>
-</div> <!--end footer-->
+  <div class="col-12 titoletto gradiente2" id="footer">designed & developed with love by ilenia Balella</div>
+</div>
 
-</div> <!--end main-content-->
-</div><!-- container-fluid -->
-  <!-- END HTML -->
+</div> <!-- end main content-->
+  </div><!-- container -->
+  <!-- END YOUR HTML -->
+
+
+
+  <script>
+
+    // quando il documento è caricato... 
+    $(function() {
+        
+      var windowTop = $(window).scrollTop();
+      var numeroAumenti = 0;
+
+      //gestisce lo scorrimento
+      $(window).scroll(function(){
+          
+         windowTop = $(window).scrollTop();
+          console.log(windowTop);
+
+          if(windowTop > 200){
+              $('.trigger-backtotop').fadeIn();
+          }else{
+              $('.trigger-backtotop').fadeOut();
+          }
+
+      });
+
+      //click sul trigger-backtotop
+      $('.trigger-backtotop').on('click', function(e){
+          e.preventDefault();
+          $('html').animate({scrollTop: 0}, 400);
+      }); 
+        
+    });//fine document-ready
+  </script>
 </body>
 
 </html>
